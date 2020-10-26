@@ -5,14 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 用户基础表
+ * 用户关联表
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserAuthRel {
     private int id;
+    private int userId;
     private String token;
-    private String expireIn;
-    private String tryTimes;
+    private int authId;
+    private String authType;
 }

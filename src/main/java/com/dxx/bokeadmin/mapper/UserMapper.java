@@ -1,8 +1,8 @@
 package com.dxx.bokeadmin.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
+import com.dxx.bokeadmin.model.User;
+import org.springframework.stereotype.Component;
 
-@Mapper
-public interface UserMapper {
-
+@Component
+public interface UserMapper extends BaseMapper<User> {
 }

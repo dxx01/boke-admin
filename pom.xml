@@ -85,7 +85,39 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+        <!-- jwt依赖 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.10.5</version>
+        </dependency>
 
+        <!--springboot中的redis依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- spring默认使用yml中的配置，但有时候要用传统的xml或properties配置，就需要使用spring-boot-configuration-processor了 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.dxx</groupId>
+            <artifactId>boke-admin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -101,13 +133,13 @@
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
-                    <include>mapper/*.xml</include>
+                    <include>**/mapper/*.xml</include>
                 </includes>
             </resource>
             <!-- mapper.xml文件在resources目录下-->
-<!--            <resource>-->
-<!--                <directory>src/main/resources</directory>-->
-<!--            </resource>-->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
         </resources>
     </build>
 
